@@ -12,7 +12,7 @@ public class casestudy3{
 				}
 				else{
 					if(j==0&j==i-1){
-						arr[i][j] = 1
+						arr[i][j] = 1;
 					}
 					else{
 						arr[i][j] = arr[i-1][j]+arr[i][j-1];
