@@ -2,24 +2,30 @@ import java.util.Scanner;
 public class casestudy3{
 	public static void main(String args[]){
 		Scanner input = new Scanner(System.in);
-		int n = input.nextInt();
-		int arr[][] = new int[n][2*n-1];
+		// int n = input.nextInt();
+		int n = 5;
+		int arr[][] = new int[n][n];
 		for(int i = 0; i<n;i++){
-			for(int j =0;j<2*n-1;j++){
-				if(i==0){
-					arr[i][j]=1;
-					continue;
-				}
-				else if(i==1){
-					arr[i][0]=1;
-					arr[i][1]=2;
-					arr[i][2]=1;
+			for(int j = 0;j<i;j++){
+				if(i<2){
+					arr[i][j] = 1;
 				}
 				else{
-					
+					if(j==0&j==i-1){
+						arr[i][j] = 1
+					}
+					else{
+						arr[i][j] = arr[i-1][j]+arr[i][j-1];
+					}
 				}
 			}
 		}
-
+		// printing
+		for(int i = 0; i<n;i++){
+			for(int j = 0;j<i;j++){
+				System.out.print(arr[i][j]+"\t");
+			}
+			System.out.println();
+		}
 	}
 }
