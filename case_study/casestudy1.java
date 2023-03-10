@@ -7,5 +7,6 @@ public class casestudy1{
 	    String spl = input.next();
 	    String passwd = str.substring(0,2)+room+spl;
 	    System.out.println(passwd); 
+		input.close();
     }
 }

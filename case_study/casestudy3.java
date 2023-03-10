@@ -27,5 +27,7 @@ public class casestudy3{
 			}
 			System.out.println();
 		}
+	input.close();
 	}
+
 }
