@@ -1,6 +1,4 @@
 import java.util.Scanner;
-
-import javax.swing.InputMap;
 public class casestudy4{
     public static void main(String args[]){
 	    Scanner input = new Scanner(System.in);
