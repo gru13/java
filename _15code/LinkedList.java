@@ -108,13 +108,27 @@ public class LinkedList{
     }
 
     static void insert(int value, int index){
-        Node tmp = head;
         Node newNode = new Node(value);
-        for(int i = 0;i<index;i++){
-            tmp = tmp.next;
+        if(index == 0){
+            newNode.next = head;
+            head = newNode;
         }
-        newNode.next = tmp.next;
-        tmp.next = newNode;
+        else if(index == LinkedList.length() - 1){
+            Node tmp = head;
+            while(tmp.next !=null){
+                tmp = tmp.next;
+            }
+            tmp.next = newNode;
+            newNode.next = null;
+        }
+        else{
+            Node tmp = head;
+            for(int i = 0;i<index-1;i++){
+                tmp = tmp.next;
+            }
+            newNode.next = tmp.next;
+            tmp.next = newNode;
+        }
     }
 
 
@@ -128,7 +142,7 @@ public class LinkedList{
         list.Create();
         list.display();
         int l = list.length();
-        list.insert(9,2);
+        list.insert(0,list.length()-1);
         list.display();
     }
 }
