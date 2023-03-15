@@ -107,6 +107,17 @@ public class LinkedList{
         tmp.next = new Node(value,null);
     }
 
+    static void insert(int value, int index){
+        Node tmp = head;
+        Node newNode = new Node(value);
+        for(int i = 0;i<index;i++){
+            tmp = tmp.next;
+        }
+        newNode.next = tmp.next;
+        tmp.next = newNode;
+    }
+
+
     LinkedList(){}
     LinkedList(Node head){
         this.head = head;
@@ -117,7 +128,7 @@ public class LinkedList{
         list.Create();
         list.display();
         int l = list.length();
-        list.insert(9);
+        list.insert(9,2);
         list.display();
     }
 }
