@@ -130,6 +130,14 @@ public class LinkedList{
             tmp.next = newNode;
         }
     }
+    
+    static void remove(){
+        Node tmp = LinkedList.head;
+        while(tmp.next.next != null){
+            tmp = tmp.next;
+        }
+        tmp.next = null;
+    }
 
 
     LinkedList(){}
@@ -142,7 +150,9 @@ public class LinkedList{
         list.Create();
         list.display();
         int l = list.length();
-        list.insert(0,list.length()-1);
+        list.insert(0);
+        list.display();
+        list.remove();
         list.display();
     }
 }
