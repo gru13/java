@@ -139,7 +139,21 @@ public class LinkedList{
         tmp.next = null;
     }
 
-
+    static void remove(int index){
+        if(index == 0){
+            LinkedList.head = LinkedList.head.next;
+        }
+        else if(index == LinkedList.length()-1){
+            LinkedList.remove();
+        }
+        else{
+            Node tmp = head;
+            for(int i = 0; i<index-1;i++){
+                tmp = tmp.next;
+            }
+            tmp.next = tmp.next.next;
+        }
+    }
     LinkedList(){}
     LinkedList(Node head){
         this.head = head;
@@ -152,7 +166,7 @@ public class LinkedList{
         int l = list.length();
         list.insert(0);
         list.display();
-        list.remove();
+        list.remove(3);
         list.display();
     }
 }
