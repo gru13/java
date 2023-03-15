@@ -7,8 +7,12 @@ public class LinkedList{
         Node next;
 
         Node(){}
-        Node(int DATA){
-            data = DATA;
+        Node(int data){
+            this.data = data;
+        }
+        Node(int data,Node next){
+            this.data = data;
+            this.next = next;
         }
     }
     
@@ -95,14 +99,25 @@ public class LinkedList{
         return -1;
     }
      
-
+    static void  insert(int value){
+        Node tmp = LinkedList.head;
+        while(tmp.next != null){
+            tmp = tmp.next;
+        }
+        tmp.next = new Node(value,null);
+    }
 
     LinkedList(){}
+    LinkedList(Node head){
+        this.head = head;
+
+    }
     public static void main(String args[]){
         LinkedList list = new LinkedList();
         list.Create();
         list.display();
         int l = list.length();
-        System.out.println(list.index(2));
+        list.insert(9);
+        list.display();
     }
 }
