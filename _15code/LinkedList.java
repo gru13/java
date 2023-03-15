@@ -71,7 +71,7 @@ public class LinkedList{
     }
 
     
-    static int index(int index){
+    static int value(int index){
         Node tmp = LinkedList.head;
         if(index >= length(tmp)){
             return -1;
@@ -81,7 +81,19 @@ public class LinkedList{
         }
         return tmp.data;
     }
-
+    
+    static int index(int value){
+        Node tmp = LinkedList.head;
+        int index = 0;
+        while(tmp!=null){
+            if(tmp.data == value){
+                return index;
+            }
+            tmp = tmp.next;
+            index++;
+        }
+        return -1;
+    }
      
 
 
