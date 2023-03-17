@@ -2,13 +2,13 @@ import java.util.*;
 
 
 public class Matrix{
-    static int Mat[][];
+    int Mat[][];
 
     Matrix(int row, int col){
         Mat = new int[row][col];
     }
 
-    public static void Create(){
+    void Create(){
         Scanner input = new Scanner(System.in);
         for(int i = 0;i<Mat.length;i++){
             for(int j = 0;j<Mat[0].length;j++){
@@ -18,7 +18,7 @@ public class Matrix{
         }
     }
 
-    public static void  display(){
+    void display(){
         for(int row[]:Mat){
             for(int val: row){
                 System.out.print(val+"\t");
