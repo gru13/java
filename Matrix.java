@@ -1,8 +1,9 @@
 import java.util.*;
 
+
 public class Matrix{
-public class Matrix{
-    public static int Mat[][];
+    static int Mat[][];
+
     Matrix(int row, int col){
         Mat = new int[row][col];
     }
@@ -24,5 +25,17 @@ public class Matrix{
             }
             System.out.println();
         }
+    }
+
+    public static void main(String args[]){
+        Matrix m1 = new Matrix(2,2);
+        Matrix m2 = new Matrix(2,2);
+        m1.Create();
+        m1.display();
+        m2.Create();
+        System.out.println();
+        m1.display();
+        System.out.println();
+        m2.display();
     }
 }
