@@ -63,17 +63,24 @@ public class Matrix{
             }
         }
     }
-
+    void Transpose(){
+        int temp =0;
+        for(int i = 0;i<Mat.length;i++){
+            for(int j =0;j<Mat[0].length;j++){
+                if(i<=j){
+                    temp = Mat[j][i];
+                    Mat[j][i] = Mat[i][j];
+                    Mat[i][j] = temp;
+                }
+            }
+        }
+    }
     public static void main(String args[]){
-        Matrix m1 = new Matrix(2,2);
+        Matrix m1 = new Matrix(3,3);
         Matrix m2 = new Matrix(2,2);
         m1.Create();
         m1.display();
-        m2.Create();
-        m2.display();
-        Matrix M3 = m1.s_mul(m2);
-        m1.s_mul(7);
-        M3.display();
+        m1.Transpose();
         m1.display();
     }
 }
