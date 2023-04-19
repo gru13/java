@@ -32,6 +32,7 @@ public class LinkedList{
             tmp = tmp.next;
         }
         tmp = null;
+        input.close();
         return head;
 
 

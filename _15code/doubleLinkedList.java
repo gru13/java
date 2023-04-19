@@ -23,7 +23,7 @@ public class doubleLinkedList{
         }
         return len;
     }
-    static void Create(){
+    void Create(){
         Node tmp = doubleLinkedList.head;
         tmp.prev = null;
         System.out.print("Enter the length of dLL : ");
@@ -36,10 +36,11 @@ public class doubleLinkedList{
             tmp.next.prev = tmp;
             tmp = tmp.next;
         }
+        input.close();
         tmp.prev.next = null; 
 
     }
-    static void display(){
+    void display(){
         Node tmp = doubleLinkedList.head;
         while(tmp!=null){
             System.out.print(tmp.data + " -> ");
@@ -47,7 +48,7 @@ public class doubleLinkedList{
         }
         System.out.print("null\n");
     }
-    static void rev_display(){
+    void rev_display(){
         Node tmp = doubleLinkedList.head;
         while(tmp.next != null){
             tmp = tmp.next;
@@ -58,7 +59,7 @@ public class doubleLinkedList{
         }
         System.out.print("null\n");
     }
-    static void insert(int val){
+    void insert(int val){
         Node tmp = head;
         while(tmp.next != null){
             tmp = tmp.next;
@@ -68,7 +69,7 @@ public class doubleLinkedList{
         tmp = tmp.next;
         tmp.next = null; 
     }
-    static void insert(int index,int val){
+    void insert(int index,int val){
         if(index == 0){
             Node newNode = new Node(val);
             newNode.prev = null;
@@ -101,7 +102,7 @@ public class doubleLinkedList{
         tmp.next.prev = null;
         tmp.next = null;
     }
-    static void remove(int index){
+    void remove(int index){
         if(index == 0){
             doubleLinkedList.head = doubleLinkedList.head.next;
             doubleLinkedList.head.prev = null;
