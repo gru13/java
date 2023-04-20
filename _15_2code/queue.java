@@ -1,6 +1,6 @@
 public class queue {
     
-    int[] arr = new int[0];
+    int[] arr = new int[1];
     int top;
     
     public void display(){
@@ -20,15 +20,12 @@ public class queue {
 
     public void enQueue(int val){
         int[] nw = new int[top+1];
-        for(int i = 0;i<nw.length;i++){
-            if(i==arr.length){
-                nw[0] = val;
-            }else{
-                nw[i] = arr[i];
-            }
+        nw[top] = val;
+        for(int i = 0;i<top;i++){
+            nw[i] = arr[i];
         }
-        arr = nw;
         top++;
+        arr = nw;
     }
     public int deQueue() {
         if(isEmpty()){

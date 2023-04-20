@@ -1,24 +1,40 @@
-import java.util.*;
+import java.util.Scanner;
+
 
 
 public class Matrix{
+    
     int Mat[][];
-
+    int row,col;
     Matrix(int row, int col){
         Mat = new int[row][col];
+        this.col = col;
+        this.row = row;
     }
-
-    public Matrix() {
+    Matrix(int index){
+        Mat = new int[index][index];
+        this.col = index;
+        this.row = index;
     }
+    
+    Matrix(){}
 
     void Create(){
         Scanner input = new Scanner(System.in);
+        System.out.print("Enter number of rows: ");
+        row = input.nextInt();
+        input.nextLine();
+        System.out.print("Enter number of columns: ");
+        col = input.nextInt();
+        input.nextLine();
+        Mat  = new int[row][col];
         for(int i = 0;i<Mat.length;i++){
             for(int j = 0;j<Mat[0].length;j++){
                 System.out.print("Enter the value at index "+i+" "+j+" : ");
                 Mat[i][j] = input.nextInt();
             }
         }
+        input.close();
     }
 
     void display(){
@@ -40,7 +56,14 @@ public class Matrix{
         }
         return a;
     }
-    
+    void eye(int index){
+        Mat = new int[index][index];
+        row = index;
+        col = index;
+        for(int i = 0;i<index;i++){
+            Mat[i][i] = 1;
+        }
+    }
     Matrix subtract(Matrix a){
         for(int i = 0 ;i<a.Mat.length;i++){
             for(int j = 0;j<a.Mat[0].length;j++){

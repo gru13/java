@@ -10,10 +10,19 @@ public class Main {
         // d.display();
         // //
 
-        // queue
-        queue q = new queue();
-        for(int i = 0;i<5;i++){q.enQueue(i);}
-        // System.out.println(q.deQueue());
-        q.display();
+        // // queue
+        // queue q = new queue();
+        // for(int i = 0;i<5;i++){q.enQueue(i);}
+        // // q.display();
+        // // System.out.println(q.deQueue());
+        // q.reverse();
+        // q.display();
+        // //
+
+        Matrix a = new Matrix();
+        Matrix b = new Matrix();
+        a.eye(3);
+        a.display();
+
     }
 }
