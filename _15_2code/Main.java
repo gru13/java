@@ -19,10 +19,24 @@ public class Main {
         // q.display();
         // //
 
-        Matrix a = new Matrix();
-        Matrix b = new Matrix();
-        a.eye(3);
-        a.display();
+        // // matrix
+        // Matrix a = new Matrix();
+        // Matrix b = new Matrix();
+        // b.Create();
+        // a.eye(3);
+        // // a.display();
+        // // b.display();
+        // a = b.copy();
+        // a.Transpose();
+        // a.display();
+        // b.display();
+        // b.mul(a);
+        // b.display();
+        // // b.Transpose();
+        // // b.display();
+        // //
+
+        
 
     }
 }
