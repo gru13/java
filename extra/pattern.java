@@ -10,5 +10,6 @@ public class pattern{
 			
 			System.out.printf("\n");
 		}
+		input.close();
 	}
 }

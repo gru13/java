@@ -56,6 +56,7 @@ public class Matrix{
         System.out.print(c[i][j] + " ");
       }
       System.out.println();
+      s.close();
     }
   }
 }
