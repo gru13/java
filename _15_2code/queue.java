@@ -2,6 +2,7 @@ public class queue {
     
     int[] arr = new int[1];
     int top;
+    final size =2222;
     
     public void display(){
         for(int val: arr){
