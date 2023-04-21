@@ -19,22 +19,22 @@ public class Main {
         // q.display();
         // //
 
-        // // matrix
-        // Matrix a = new Matrix();
-        // Matrix b = new Matrix();
-        // b.Create();
-        // a.eye(3);
-        // // a.display();
-        // // b.display();
-        // a = b.copy();
-        // a.Transpose();
+        // matrix
+        Matrix a = new Matrix();
+        Matrix b = new Matrix();
+        b.Create();
+        a.eye(3);
         // a.display();
         // b.display();
-        // b.mul(a);
+        a = b.copy();
+        a.Transpose();
+        a.display();
+        b.display();
+        b.mul(a);
+        b.display();
+        // b.Transpose();
         // b.display();
-        // // b.Transpose();
-        // // b.display();
-        // //
+        //
 
         
 
