@@ -2,7 +2,8 @@ public class queue {
     
     int[] arr = new int[1];
     int top;
-    
+    final size = 1000;
+
     public void display(){
         for(int val: arr){
             System.out.println(val);
