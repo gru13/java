@@ -35,7 +35,7 @@ public class ArrayListExample {
         // boolean removed = arrayList.remove(Integer.valueOf(10));
         arrayList.remove(Integer.valueOf(10));
         System.out.println("ArrayList after removing 10: " + arrayList);
-
+ 
         // Iterate over the elements of the ArrayList and print each element
         System.out.print("Elements in ArrayList: ");
         for (int element : arrayList) {
