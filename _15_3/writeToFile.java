@@ -9,6 +9,11 @@ public class writeToFile {
         File FILE = new File(FileName);
         try (FileReader file = new FileReader(FILE)) {
             StringBuilder Res = new StringBuilder();
+            int character;
+            while((character = file.read()) != -1){
+                Res.append((char)character);
+            }
+            System.out.println(Res.toString());
         } catch (IOException e) {
             e.printStackTrace();
         }

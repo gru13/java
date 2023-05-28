@@ -14,44 +14,44 @@ public class TextFileOperationsExample {
         } catch (IOException e) {
             e.printStackTrace();
         }
-        // // Write content to the file
-        // writeToFile(fileName, "Hello, World!");
+        // Write content to the file
+        writeToFile(fileName, "Hello, World!");
 
-        // // Append content to the file
-        // appendToFile(fileName, " This is additional text.");
+        // Append content to the file
+        appendToFile(fileName, " This is additional text.");
 
-        // // Read and display the content of the file
-        // readAndDisplayFile(fileName);
+        // Read and display the content of the file
+        readAndDisplayFile(fileName);
     }
 
-    // public static void writeToFile(String fileName, String content) {
-    //     try (FileWriter writer = new FileWriter(fileName)) {
-    //         writer.write(content);
-    //         System.out.println("Content written to the file.");
-    //     } catch (IOException e) {
-    //         e.printStackTrace();
-    //     }
-    // }
+    public static void writeToFile(String fileName, String content) {
+        try (FileWriter writer = new FileWriter(fileName)) {
+            writer.write(content);
+            System.out.println("Content written to the file.");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
 
-    // public static void appendToFile(String fileName, String content) {
-    //     try (FileWriter writer = new FileWriter(fileName, true)) {
-    //         writer.write(content);
-    //         System.out.println("Content appended to the file.");
-    //     } catch (IOException e) {
-    //         e.printStackTrace();
-    //     }
-    // }
+    public static void appendToFile(String fileName, String content) {
+        try (FileWriter writer = new FileWriter(fileName, true)) {
+            writer.write(content);
+            System.out.println("Content appended to the file.");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
 
-    // public static void readAndDisplayFile(String fileName) {
-    //     try (FileReader reader = new FileReader(fileName)) {
-    //         int character;
-    //         while ((character = reader.read()) != -1) {
-    //             System.out.print((char) character);
-    //         }
-    //     } catch (IOException e) {
-    //         e.printStackTrace();
-    //     }
-    // }
+    public static void readAndDisplayFile(String fileName) {
+        try (FileReader reader = new FileReader(fileName)) {
+            int character;
+            while ((character = reader.read()) != -1) {
+                System.out.print((char) character);
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
 }
 
 /*
